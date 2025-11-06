@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# Axial Coding Studio (ACS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A local-first qualitative coding tool for researchers.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Local-First**: All data stays on your machine. No telemetry, no external APIs.
+- **Deterministic**: Same seed produces identical results (seeded PRNG for reproducibility).
+- **Undo/Redo**: Every action is reversible with comprehensive action logging.
+- **Parser Studio**: Intelligent transcript parsing with pattern learning.
+- **Axial Coding**: Drag-and-drop category builder for thematic analysis.
+- **Relationship Mapping**: Define when-then relationships between themes.
+- **Quality Gates**: Built-in metrics to ensure rigorous analysis.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19 + TypeScript (strict mode)
+- **Routing**: React Router v7
+- **State**: Zustand with action log for undo/redo
+- **Database**: Dexie (IndexedDB wrapper)
+- **UI**: Tailwind CSS with local fonts
+- **Build**: Vite
+- **Testing**: Vitest + React Testing Library
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Install dependencies
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Start development server
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Run tests
+npm run test
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Type check
+npm run typecheck
+
+# Lint
+npm run lint
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── features/      # Feature modules (paste-wizard, merge-ledger, axial-board, etc.)
+├── ui/            # Reusable UI components
+├── lib/           # Utility functions (PRNG, text processing, math)
+├── db/            # Dexie database schema and migrations
+├── state/         # Zustand store with action log
+├── parser/        # Transcript parsing pipeline
+├── workers/       # Web Workers for heavy computation
+├── hooks/         # Custom React hooks
+└── types/         # TypeScript type definitions
+```
+
+## Routes
+
+- `/` - Home
+- `/paste` - Paste Wizard (import transcripts)
+- `/merge` - Merge Ledger (combine similar codes)
+- `/axial` - Axial Board (category builder)
+- `/matrices/coverage` - Coverage Matrix
+- `/matrices/cooccurrence` - Co-occurrence Matrix
+- `/network` - Network Graph
+- `/relationships` - Relationship Builder
+- `/metrics` - Metrics Panel
+- `/export` - Export Panel
+
+## Development
+
+Built with strict TypeScript, ESLint, and Prettier. All quality gates must pass:
+
+- ✅ Type checking (no implicit `any`)
+- ✅ Linting (React hooks rules)
+- ✅ Tests (determinism verified)
+- ✅ Local-first (no network calls)
+
+## License
+
+TBD

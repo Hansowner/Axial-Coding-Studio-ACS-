@@ -1,0 +1,80 @@
+{
+  "id": "prof_demo",
+  "projectId": "proj_demo",
+  "name": "Demo Parser Profile",
+  "rules": [
+    {
+      "id": "rule_pain",
+      "type": "pain",
+      "pattern": "Pain:\\s*(\\d+)",
+      "priority": 10,
+      "enabled": true,
+      "learnedFromExample": false,
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "rule_adequacy",
+      "type": "adequacy",
+      "pattern": "Adequacy:\\s*(\\d+)",
+      "priority": 10,
+      "enabled": true,
+      "learnedFromExample": false,
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "rule_speaker",
+      "type": "speaker",
+      "pattern": "^(Interviewer|Participant [A-Z]):",
+      "priority": 20,
+      "enabled": true,
+      "learnedFromExample": false,
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "rule_code_slow",
+      "type": "code",
+      "pattern": "\\b(slow|sluggish|lag|timeout)\\b",
+      "priority": 5,
+      "enabled": true,
+      "learnedFromExample": false,
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "rule_code_collab",
+      "type": "code",
+      "pattern": "\\b(collaboration|overwrite|conflict|version control)\\b",
+      "priority": 5,
+      "enabled": true,
+      "learnedFromExample": false,
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "rule_code_mobile",
+      "type": "code",
+      "pattern": "\\b(mobile|responsive|phone|tablet)\\b",
+      "priority": 5,
+      "enabled": true,
+      "learnedFromExample": false,
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "rule_code_ui",
+      "type": "code",
+      "pattern": "\\b(dashboard|interface|visualization|widgets?)\\b",
+      "priority": 5,
+      "enabled": true,
+      "learnedFromExample": false,
+      "createdAt": "2025-01-01T00:00:00Z"
+    }
+  ],
+  "cleaningToggles": {
+    "trimWhitespace": true,
+    "removeExtraSpaces": true,
+    "normalizeLineBreaks": true,
+    "removeEmptyLines": false,
+    "caseSensitive": false
+  },
+  "isDefault": true,
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
+}

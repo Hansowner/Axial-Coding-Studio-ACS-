@@ -1,0 +1,41 @@
+Interviewer: Thank you for joining us today. Can you tell me about your experience with the current system?
+
+Participant A: Well, I've been using it for about six months now. The main issue is that it's really slow when processing large files. Pain: 8. I'd say the current solution is adequate for small tasks, maybe Adequacy: 3 out of 10, but it breaks down completely when I try to do anything substantial.
+
+Interviewer: What specifically breaks down?
+
+Participant A: The upload process times out after 30 seconds, and there's no way to resume. I lose all my work. It's incredibly frustrating. Pain: 9. And the error messages don't tell you anything useful - just "Error occurred, please try again." That's not helpful at all.
+
+Interviewer: I see. Have you found any workarounds?
+
+Participant A: I've had to break my files into smaller chunks, which takes hours of manual work. Adequacy: 2. It defeats the whole purpose of automation. Plus, there's no batch processing, so I have to babysit each upload.
+
+---
+
+Interviewer: Let's talk about the collaboration features.
+
+Participant B: The collaboration part is where things really fall apart. When multiple people are working on the same project, we constantly overwrite each other's changes. Pain: 10. There's no conflict resolution at all. Adequacy: 1.
+
+Interviewer: How does that impact your workflow?
+
+Participant B: We've had to implement our own version control system outside the platform, using spreadsheets and email. It's archaic. We waste probably 30% of our time just coordinating who's editing what. The notification system doesn't work either - I never know when someone has made a change until it's too late.
+
+---
+
+Interviewer: What about the positive aspects?
+
+Participant C: I actually really like the dashboard interface. It's clean and intuitive. Pain: 2. The visualizations are helpful, and I can get a quick overview of everything. Adequacy: 7. The search functionality works well too - I can find what I need quickly.
+
+Interviewer: What makes the dashboard work well for you?
+
+Participant C: It's customizable. I can arrange the widgets how I want them, and the filters are powerful. The real-time updates are nice when they work. Though sometimes there's a lag, maybe 5-10 seconds, but it's acceptable for my use case.
+
+---
+
+Interviewer: Any final thoughts?
+
+Participant D: The mobile experience is terrible. Pain: 9. Everything is cramped, buttons are too small, and half the features don't even work on mobile. Adequacy: 1. In today's world, that's unacceptable. I need to be able to review and approve things when I'm away from my desk, but I can't.
+
+The desktop version is better, but even there, the performance degrades over time. After a few hours of use, I have to refresh the page or it becomes sluggish. That suggests there might be a memory leak or something.
+
+Interviewer: Thank you all for your candid feedback. This is very valuable for our improvement efforts.
